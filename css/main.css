@@ -43,9 +43,24 @@ hr {
     clear:both;
 }
 
+#loading {
+    text-align: center;
+    display: none;
+}
 
+.image-block {
+    border: 4px solid black;
+    padding: 10px 10px 0px 10px;
+    /* float: left; */
+    width: 48%;
+    min-width: 300px;
+    margin: 10px;
+}
 
-
+.error {
+    color: red;
+    text-align: center;
+}
 
 
 

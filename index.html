@@ -9,6 +9,7 @@
         <title>Flickr Search</title>
         <meta name="description" content="Demo of searching via Flickr API using AJAX.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -39,9 +40,9 @@
           <a class="navbar-brand" href="#">Flickr Search</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
+          <form id="search-form" class="navbar-form navbar-right" role="form">
             <div class="form-group">
-              <input type="text" placeholder="Type keywords here." class="form-control" name="searchText">
+              <input type="text" placeholder="Type keywords here." id="search-input" class="form-control" name="searchText">
             </div>
             <button type="submit" class="btn btn-primary search" name="searchButton">Search</button>
           </form>
@@ -51,6 +52,9 @@
 
     <div class="container">
       <h1 class="search-title">Flickr Search</h1>
+      <div id="loading">
+          <i class="fa fa-spinner fa-pulse fa-4x"></i>
+      </div>
       <ul id="images">
         <!-- TODO: Replace the content in this area with a grid of images based on the results of the search. -->
         <li class="placeholder">Search for images using the search bar above!</li>
@@ -59,7 +63,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Jane Student 2015</p>
+        <p>&copy; Shayna Worthen 2016</p>
       </footer>
     </div> <!-- /container -->
 
@@ -81,7 +85,7 @@
       </div>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
     <script src="js/vendor/bootstrap.min.js"></script>
